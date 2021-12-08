@@ -1,8 +1,6 @@
 import functools
 
 # 1
-from typing import Callable, Any
-
 int_a = 55
 str_b = 'cursor'
 set_c = {1, 2, 3}
