@@ -1,22 +1,22 @@
 import functools
 
 # 1
-from typing import Dict
+from typing import Callable, Any
 
 int_a = 55
 str_b = 'cursor'
 set_c = {1, 2, 3}
 lst_d = [1, 2, 3]
 dict_e = {'a': 1, 'b': 2, 'c': 3}
-
-# 2
-lst_d.append(4)
-lst_d.append(5)
 print(id(int_a))
 print(id(str_b))
 print(id(set_c))
 print(id(lst_d))
 print(id(dict_e))
+
+# 2
+lst_d.append(4)
+lst_d.append(5)
 
 # 3
 print(type(int_a))
@@ -70,11 +70,11 @@ print(lst)
 # 13
 # list_comprehension = [num // 2 if num % 2 == 0 else num * 10 for num in range(10)]
 list_comprehension = []
-for num in range(10):
-    if num % 2 == 0:
-        lst.append(num // 2)
+for num2 in range(10):
+    if num2 % 2 == 0:
+        lst.append(num2 // 2)
     else:
-        num * 10
+        lst.append(num2 * 10)
 
 # 14
 """d = {}
@@ -99,18 +99,18 @@ print(dict2)
 # 16
 # dict_comprehension = {x: x**3 for x in range(10) if x**3 % 4 == 0}
 dict_comprehension1 = {}
-for x in range(10):
-    if x ** 3 % 4 == 0:
-        dict_comprehension1[x] = x**3
+for t in range(10):
+    if t ** 3 % 4 == 0:
+        dict_comprehension1[t] = t ** 3
 
 # 17
 # dict_comprehension = {x: x**3 if x**3 % 4 == 0 else x for x in range(10)}
 dict_comprehension2 = {}
 for x in range(10):
-    if x**3 % 4 == 0:
-        dict_comprehension1[x] = x**3
+    if x ** 3 % 4 == 0:
+        dict_comprehension1[x] = x ** 3
     else:
-        x
+        dict_comprehension1[x] = x
 
 # 18
 
