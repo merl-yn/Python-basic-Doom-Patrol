@@ -146,7 +146,7 @@ print(new_list)
 # 23
 list_A = [2, 3, 4]
 list_B = [5, 6, 7]
-ListC = list(map(lambda j, k: j ** k, list_A, list_B))
+listC = list(map(lambda j, k: j ** k, list_A, list_B))
 
 
 def getAdd(a, b):
@@ -158,8 +158,8 @@ def getAdd(a, b):
 functools.reduce(getAdd, lst_to_sort)
 
 # 25
-ListD = list(filter(lambda g: (g % 2 == 1), lst_to_sort))
-print(ListD)
+listD = list(filter(lambda g: (g % 2 == 1), lst_to_sort))
+print(listD)
 
 # 26
 lst_neg = list(filter(lambda b: b < 0, range(-10, 10)))
