@@ -13,6 +13,9 @@ class Bus(Vehicle):
         super().__init__(max_speed, mileage)
         self.seating_capacity = seating_capacity
 
+    def getMaxSpeed(self):
+        return f"Max speed of bus is {self.max_speed}"
+
 
 # 3
 
@@ -28,18 +31,22 @@ print(isinstance(school_bus, Vehicle))
 # 5
 
 class School:
-    def __init__(self, get_school_id, number_of_students):
-        self.get_school_id = get_school_id
+    def __init__(self, school_id, number_of_students):
+        self.school_id = school_id
         self.number_of_students = number_of_students
 
 
 # 6
 
 class SchoolBus(School, Bus):
-    def __init__(self, get_school_id, number_of_students, max_speed, mileage, seating_capacity, bus_school_color):
-        School.__init__(self, get_school_id, number_of_students)
+    def __init__(self, school_id, number_of_students, max_speed, mileage, seating_capacity, bus_school_color, school_bus_id):
+        School.__init__(self, school_id, number_of_students)
         Bus.__init__(self, max_speed, mileage, seating_capacity)
         self.bus_school_color = bus_school_color
+        self.school_bus_id = school_bus_id
+
+    def getSchoolBusId(self):
+        return f"School bus id is {self.school_bus_id}"
 
 
 # 7
@@ -60,10 +67,10 @@ class Wolf:
         return f"Wolf says {self.sound}"
 
 
-darkBear = Bear("rrrrrr")
-greyWolf = Wolf("aauuuu")
+dark_bear = Bear("rrrrrr")
+grey_wolf = Wolf("aauuuu")
 
-animals = (darkBear, greyWolf)
+animals = (dark_bear, grey_wolf)
 
 for sounds in animals:
     print(sounds.make_sound())
