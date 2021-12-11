@@ -13,7 +13,7 @@ class Bus(Vehicle):
         super().__init__(max_speed, mileage)
         self.seating_capacity = seating_capacity
 
-    def getMaxSpeed(self):
+    def get_max_speed(self):
         return f"Max speed of bus is {self.max_speed}"
 
 
@@ -45,7 +45,7 @@ class SchoolBus(School, Bus):
         self.bus_school_color = bus_school_color
         self.school_bus_id = school_bus_id
 
-    def getSchoolBusId(self):
+    def get_school_bus_id(self):
         return f"School bus id is {self.school_bus_id}"
 
 
