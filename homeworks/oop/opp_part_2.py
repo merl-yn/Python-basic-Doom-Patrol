@@ -3,6 +3,7 @@ from collections import namedtuple
 
 # 1
 
+
 class Laptop:
     def __init__(self):
         battery_1 = Battery(f"Charge level first battery is 100%")
@@ -30,8 +31,8 @@ class GuitarString:
         pass
 
 
-guitar_string = GuitarString()
-guitar = Guitar(guitar_string)
+guitar_str = GuitarString()
+guitar = Guitar(guitar_str)
 
 
 # 3
@@ -97,7 +98,13 @@ class AddressBookDataClass:
 
 # 7
 
-AddressBookClass = namedtuple('AddressBookClass', ['key', 'name', 'phone_number', 'address', 'email', 'birthday', 'age'])
+AddressBookClass = namedtuple('AddressBookClass', ['key',
+                                                   'name',
+                                                   'phone_number',
+                                                   'address',
+                                                   'email',
+                                                   'birthday',
+                                                   'age'])
 
 
 # 8
@@ -113,7 +120,9 @@ class AddressBook:
         self.age = int(age)
 
     def __str__(self):
-        return f'{self.key}, {self.name}, {self.phone_number}, {self.address}, {self.email}, {self.birthday}, {self.age}'
+        return f'{self.key}, {self.name},' \
+               f' {self.phone_number}, {self.address},' \
+               f' {self.email}, {self.birthday}, {self.age}'
 
 
 class Person:
@@ -134,8 +143,8 @@ class Person:
 # 10
 
 class Student:
-    def __init__(self, id, name):
-        self.id = id
+    def __init__(self, idi, name):
+        self.id = idi
         self.name = name
 
 
@@ -157,34 +166,3 @@ class Celsius:
 
 obj = Celsius(36)
 print(obj.convert_cel_to_fahr)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
