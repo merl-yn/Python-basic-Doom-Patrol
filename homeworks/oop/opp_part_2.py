@@ -55,11 +55,11 @@ class Pasta:
         self.ingredients = ingredients
 
     @classmethod
-    def carbonara(cls):
+    def carbon(cls):
         return cls(cls.TYPES[0])
 
     @classmethod
-    def bolognaise(cls):
+    def bolog(cls):
         return cls(cls.TYPES[1])
 
 
