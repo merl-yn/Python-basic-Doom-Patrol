@@ -1,10 +1,34 @@
-def user_input():
+def func_calc():
     first_num = int(input("Enter first num: "))
     operation = input("Enter operation: ")
     second_num = int(input("Enter second num: "))
-    result = f'{first_num} {operation} {second_num}'
+    result = 0
+
+    if operation == '+':
+        result += first_num + second_num
+    elif operation == '-':
+        result += first_num - second_num
+    elif operation == '*':
+        result += first_num * second_num
+    elif operation == '/':
+        if second_num == 0:
+            print("Ділення на 0!")
+            result = None
+        else:
+            result += first_num / second_num
+    elif operation == '//':
+        result += first_num // second_num
+    elif operation == '%':
+        result += first_num % second_num
+    elif operation == '**':
+        result += first_num ** second_num
+    else:
+        print("Такої операції немає!")
+
+    result_str = f'{first_num} {operation} {second_num}'
+
     file = open('result.txt', 'w')
-    file.write(result + " = " + str(eval(result)))
+    file.write(f'{result_str} = {result}')
     file.close()
 
 
@@ -15,5 +39,5 @@ def print_result():
 
 
 while True:
-    user_input()
+    func_calc()
     print_result()
