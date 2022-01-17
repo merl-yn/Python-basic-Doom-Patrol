@@ -79,6 +79,7 @@ def update_user():
     file = open(Config.PATH_TO_USERS_FILE, 'r')
     users = json.loads(file.read())
     file.close()
+# Added ValueError
     try:
         id = int(input("Type id of user which you want to update: "))
     except ValueError:
