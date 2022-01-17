@@ -9,12 +9,14 @@ while True:
            + "3. Search\n"
            + "4. Update User By Id"
           )
+
     try:
         menu_flag = int(input("Type your choose: "))
     except ValueError:
         print("You can't type letters")
         logging.warning('somebody want to choose a letter!')
         continue
+
     if menu_flag == 1:
         logging.info("User Add")
         user_add()
@@ -36,7 +38,6 @@ while True:
             logging.error('File Not Found!!!')
             create_file()
             search_by(search_str, what_to_search)
-
     elif menu_flag == 4:
         logging.info("Update!")
         try:

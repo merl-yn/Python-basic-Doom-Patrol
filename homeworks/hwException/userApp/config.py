@@ -1,4 +1,3 @@
-
 class Config:
     USERS_DIRECTORY = 'database'
     USERS_FILE = 'users.json'
